@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask CRUD App 🚀</title>
+</head>
+<body>
+    <h1>Flask CRUD App 🚀</h1>
+
+    <form action="/add" method="POST">
+        <input type="text" name="item" placeholder="Enter item">
+        <button type="submit">Add</button>
+    </form>
+
+    <ul>
+        {% for item in items %}
+            <li>
+                {{ item.name }}
+                <a href="/delete/{{ item.id }}">❌ Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+
+
